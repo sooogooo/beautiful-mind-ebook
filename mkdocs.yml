@@ -1,0 +1,190 @@
+site_name: 美丽心灵地图 - 医美心理学指南
+site_description: 一本关于医美心理学的专业指南，帮助女性理性认识美丽，做出明智决策
+site_author: 于晓冬
+site_url: https://docs.bccsw.cn
+
+# Repository
+repo_name: 重庆联合丽格
+repo_url: https://cqlhlg.work
+
+# Copyright
+copyright: >
+  Copyright &copy; 2024 重庆联合丽格科技有限公司 -
+  <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">渝ICP备2024023473号</a>
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  custom_dir: overrides
+  logo: https://docs.bccsw.cn/logo.png
+  favicon: https://docs.bccsw.cn/favicon.png
+  
+  # 移动端优先配置
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.tooltips
+    
+  # 医美主题配色方案
+  palette:
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  
+  # 字体配置
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+
+# 插件
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s\-\.]'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
+
+# 扩展
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: 本章目录
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# 额外的CSS和JS
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+
+# 额外配置
+extra:
+  # 社交链接
+  social:
+    - icon: fontawesome/solid/phone
+      link: tel:023-68726872
+      name: 联系电话
+    - icon: fontawesome/solid/envelope
+      link: mailto:bccsw@cqlhlg.work
+      name: 电子邮箱
+    - icon: fontawesome/solid/map-marker-alt
+      link: https://map.baidu.com/search/重庆市渝中区临江支路28号
+      name: 公司地址
+  
+  # 版本控制
+  version:
+    provider: mike
+    default: latest
+  
+  # SEO优化
+  meta:
+    description: 医美心理学专业指南，帮助女性理性认识美丽
+    keywords: 医美,心理学,女性,美丽,决策,咨询
+    author: 于晓冬
+    og:type: website
+    og:title: 美丽心灵地图 - 医美心理学指南
+    og:description: 一本关于医美心理学的专业指南，帮助女性理性认识美丽，做出明智决策
+    og:image: https://docs.bccsw.cn/logo.png
+    twitter:card: summary_large_image
+    twitter:title: 美丽心灵地图 - 医美心理学指南
+    twitter:description: 一本关于医美心理学的专业指南，帮助女性理性认识美丽，做出明智决策
+    twitter:image: https://docs.bccsw.cn/logo.png
+
+# 导航结构
+nav:
+  - 首页: index.md
+  - 序言: 01-preface.md
+  - 引言: 02-introduction.md
+  - 变美动机分析: 03-motivation-analysis.md
+  - 医美决策心理学: 04-decision-making.md
+  - 医美营销心理学: 05-marketing-psychology.md
+  - 不同年龄段的美丽心理: 06-age-stages.md
+  - 自我系统重建: 07-self-system.md
+  - 内在自信的培养: 08-inner-confidence.md
+  - 美丽与幸福的关系: 09-beauty-happiness.md
+  - 美丽规划师: 10-beauty-planner.md
+  - 结语: 11-epilogue.md
+  - 心理学效应集锦: 12-psychology-effects.md
+  - 福利官联系: consultant.md

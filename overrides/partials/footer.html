@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block footer %}
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      <!-- Company Information Section -->
+      <div class="md-footer__company">
+        <div class="md-footer__company-info">
+          <h4 style="color: white; margin-bottom: 1rem; font-weight: 300;">联系我们</h4>
+          <div class="md-footer__contact">
+            <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.8);">
+              <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
+              重庆市渝中区临江支路28号
+            </p>
+            <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.8);">
+              <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+              <a href="mailto:bccsw@cqlhlg.work" style="color: rgba(255,255,255,0.8); text-decoration: none;">
+                bccsw@cqlhlg.work
+              </a>
+            </p>
+            <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.8);">
+              <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>
+              <a href="tel:023-68726872" style="color: rgba(255,255,255,0.8); text-decoration: none;">
+                023-68726872
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.2); margin: 2rem 0;"></div>
+
+      <!-- Copyright and ICP Section -->
+      <div class="md-footer__copyright">
+        <div style="text-align: center;">
+          <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.8); font-size: 0.9rem;">
+            © {{ config.copyright }} 重庆联合丽格科技有限公司
+          </p>
+          <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.6); font-size: 0.8rem;">
+            <a href="https://beian.miit.gov.cn/" target="_blank" 
+               style="color: rgba(255,255,255,0.6); text-decoration: none;">
+              渝ICP备2024023473号
+            </a>
+          </p>
+          <p style="margin: 1rem 0 0 0; color: rgba(255,255,255,0.5); font-size: 0.7rem;">
+            本网站内容仅供参考，不构成医疗建议。请咨询专业医师获取个性化建议。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+.md-footer {
+  background: linear-gradient(135deg, #6b46c1 0%, #f8b5c1 100%);
+  margin-top: 2rem;
+}
+
+.md-footer__company {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.md-footer__company-info h4 {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', sans-serif;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.md-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.md-footer__contact a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .md-footer-meta__inner {
+    padding: 1.5rem 1rem;
+  }
+  
+  .md-footer__contact {
+    font-size: 0.9rem;
+  }
+  
+  .md-footer__company-info h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Font Awesome icons fallback */
+.fas::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fa-map-marker-alt::before {
+  content: "\f3c5";
+}
+
+.fa-envelope::before {
+  content: "\f0e0";
+}
+
+.fa-phone::before {
+  content: "\f095";
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+{% endblock %}

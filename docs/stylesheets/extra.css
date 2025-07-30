@@ -1,0 +1,308 @@
+/* Medical Beauty Website - Mobile First Design */
+
+/* Global Variables */
+:root {
+  /* Medical Beauty Color Palette */
+  --medical-primary: #f8b5c1;
+  --medical-secondary: #6b46c1;
+  --medical-accent: #ec4899;
+  --medical-neutral: #f7fafc;
+  --medical-text: #374151;
+  --medical-light: #fef7f0;
+  --medical-shadow: rgba(107, 70, 193, 0.1);
+  
+  /* Typography */
+  --medical-font-primary: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', sans-serif;
+  --medical-font-secondary: 'Noto Sans SC', 'Source Han Sans SC', sans-serif;
+  
+  /* Spacing */
+  --medical-spacing-xs: 0.5rem;
+  --medical-spacing-sm: 1rem;
+  --medical-spacing-md: 1.5rem;
+  --medical-spacing-lg: 2rem;
+  --medical-spacing-xl: 3rem;
+}
+
+/* Body and Typography */
+body {
+  font-family: var(--medical-font-primary);
+  color: var(--medical-text);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--medical-light) 0%, var(--medical-neutral) 100%);
+}
+
+/* Headers */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: var(--medical-font-secondary);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--medical-secondary);
+  margin: var(--medical-spacing-lg) 0 var(--medical-spacing-md) 0;
+}
+
+.md-typeset h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--medical-primary), var(--medical-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: var(--medical-spacing-md) 0;
+}
+
+.md-typeset h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--medical-primary);
+  padding-bottom: var(--medical-spacing-xs);
+}
+
+/* Paragraphs */
+.md-typeset p {
+  margin: var(--medical-spacing-md) 0;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--medical-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--medical-accent);
+  color: var(--medical-secondary);
+}
+
+/* Header customization */
+.md-header {
+  background: linear-gradient(135deg, var(--medical-primary) 0%, var(--medical-secondary) 100%);
+  box-shadow: 0 2px 20px var(--medical-shadow);
+}
+
+.md-header__title {
+  font-family: var(--medical-font-secondary);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+/* Navigation */
+.md-nav__title {
+  font-family: var(--medical-font-secondary);
+  font-weight: 400;
+  color: var(--medical-secondary);
+}
+
+.md-nav__item .md-nav__link {
+  color: var(--medical-text);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding: var(--medical-spacing-xs) var(--medical-spacing-sm);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.md-nav__item .md-nav__link:hover,
+.md-nav__item .md-nav__link--active {
+  background: linear-gradient(135deg, var(--medical-primary), var(--medical-accent));
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Content area */
+.md-main {
+  background: var(--medical-neutral);
+}
+
+.md-content {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px var(--medical-shadow);
+  margin: var(--medical-spacing-md);
+  overflow: hidden;
+}
+
+.md-content__inner {
+  padding: var(--medical-spacing-xl) var(--medical-spacing-lg);
+}
+
+/* Blockquotes */
+.md-typeset blockquote {
+  border-left: 4px solid var(--medical-primary);
+  background: var(--medical-light);
+  padding: var(--medical-spacing-md);
+  margin: var(--medical-spacing-lg) 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  position: relative;
+}
+
+.md-typeset blockquote::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--medical-primary);
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-family: serif;
+}
+
+/* Lists */
+.md-typeset ul,
+.md-typeset ol {
+  margin: var(--medical-spacing-md) 0;
+}
+
+.md-typeset li {
+  margin: var(--medical-spacing-xs) 0;
+  line-height: 1.8;
+}
+
+/* Code blocks */
+.md-typeset code {
+  background: var(--medical-light);
+  color: var(--medical-secondary);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Tables */
+.md-typeset table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px var(--medical-shadow);
+  margin: var(--medical-spacing-lg) 0;
+}
+
+.md-typeset th {
+  background: linear-gradient(135deg, var(--medical-primary), var(--medical-accent));
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.md-typeset td {
+  padding: var(--medical-spacing-sm);
+  border-bottom: 1px solid var(--medical-light);
+}
+
+/* Footer */
+.md-footer {
+  background: linear-gradient(135deg, var(--medical-secondary) 0%, var(--medical-primary) 100%);
+  color: white;
+}
+
+.md-footer__inner {
+  padding: var(--medical-spacing-xl) var(--medical-spacing-lg);
+}
+
+/* QR Code Container */
+.qr-contact {
+  text-align: center;
+  margin: var(--medical-spacing-xl) 0;
+  padding: var(--medical-spacing-lg);
+  background: var(--medical-light);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px var(--medical-shadow);
+}
+
+.qr-contact h3 {
+  color: var(--medical-secondary);
+  margin-bottom: var(--medical-spacing-md);
+  font-weight: 300;
+}
+
+.qr-contact img {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px var(--medical-shadow);
+}
+
+.qr-contact p {
+  color: var(--medical-text);
+  font-size: 0.9rem;
+  margin-top: var(--medical-spacing-sm);
+}
+
+/* Mobile Optimizations */
+@media screen and (max-width: 768px) {
+  .md-content {
+    margin: var(--medical-spacing-sm);
+    border-radius: 10px;
+  }
+  
+  .md-content__inner {
+    padding: var(--medical-spacing-lg) var(--medical-spacing-md);
+  }
+  
+  .md-typeset h1 {
+    font-size: 1.8rem;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.5rem;
+  }
+  
+  .qr-contact {
+    margin: var(--medical-spacing-lg) 0;
+    padding: var(--medical-spacing-md);
+  }
+  
+  .qr-contact img {
+    max-width: 150px;
+  }
+}
+
+/* Tablet Optimizations */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .md-content {
+    margin: var(--medical-spacing-md) var(--medical-spacing-lg);
+  }
+  
+  .qr-contact img {
+    max-width: 180px;
+  }
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content__inner > * {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--medical-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--medical-primary), var(--medical-accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--medical-secondary);
+}
